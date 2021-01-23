@@ -1,7 +1,7 @@
 console.log("The Client side JS file is linked and is working!");
 
 const getData = (location) =>{
-    fetch(`http://localhost:3000/weather?address=${location}`)
+    fetch(`/weather?address=${location}`)
     .then(response =>response.json())
     .then(data => {
         if(data.error) {

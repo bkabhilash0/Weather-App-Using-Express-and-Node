@@ -5,6 +5,7 @@ const geocode = require("./utils/geocode");
 const forecast = require("./utils/forecast");
 
 const app = express();
+port = process.env.PORT || 3000;
 
 // *The app.get wont be executed for the specific ones. except index all must have html suffix
 // ! Setting the Static files Path
@@ -94,6 +95,6 @@ app.get("*",(req,res)=>{
 });
 
 
-app.listen(3000,()=>{
-    console.log("Server listening on port 3000");
+app.listen(port,()=>{
+    console.log("Server listening on port",3000);
 });
